@@ -67,7 +67,11 @@ spec:
     stage('Deploy Dev') {
       steps {
         container('kubectl') {
-          
+          sh "gcloud config list"
+          sh "gcloud config set project ${PROJECT}"
+          sh "gcloud config set account gke-admin@intrepid-league-397203.iam.gserviceaccount.com"
+          sh "gcloud auth activate-service-account --key-file=./service-account.json"
+          sh "gcloud config list"
           sh "gcloud container clusters get-credentials k8s-cluster-dev --region europe-west2 --project intrepid-league-397203"
           sh "kubectl apply -f paymentservice.yaml"
         }
