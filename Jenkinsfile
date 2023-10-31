@@ -68,7 +68,7 @@ spec:
       steps {
         container('kubectl') {
           
-          sh "gcloud container clusters get-credentials hipstar --zone us-central1-c --project ${PROJECT}"
+          sh "gcloud container clusters get-credentials k8s-cluster-dev --region europe-west2 --project intrepid-league-397203"
           sh "kubectl apply -f paymentservice.yaml"
         }
       }
