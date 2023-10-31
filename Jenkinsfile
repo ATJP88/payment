@@ -57,6 +57,7 @@ spec:
         container('gcloud') {
           sh "gcloud config list"
           sh "gcloud config set account gke-admin@intrepid-league-397203.iam.gserviceaccount.com"
+          sh "gcloud auth activate-service-account --key-file=./service-account.json"
           sh "gcloud config list"
           sh "PYTHONUNBUFFERED=1 gcloud builds submit -t ${IMAGE_TAG} ."
         }
