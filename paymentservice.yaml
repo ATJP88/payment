@@ -50,7 +50,7 @@ kind: Service
 metadata:
   name: paymentservice
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: paymentservice
   ports:
