@@ -60,7 +60,7 @@ spec:
           sh "gcloud config set account gke-admin@intrepid-league-397203.iam.gserviceaccount.com"
           sh "gcloud auth activate-service-account --key-file=./service-account.json"
           sh "gcloud config list"
-          sh "PYTHONUNBUFFERED=1 gcloud builds submit -t ${IMAGE_TAG} ."
+          // sh "PYTHONUNBUFFERED=1 gcloud builds submit -t ${IMAGE_TAG} ."
         }
       }
     } 
@@ -73,7 +73,7 @@ spec:
           sh "gcloud auth activate-service-account --key-file=./service-account.json"
           sh "gcloud config list"
           sh "gcloud container clusters get-credentials k8s-cluster-dev --region europe-west2 --project intrepid-league-397203"
-          sh "kubectl apply -f hipstar.yaml"
+          sh "kubectl delete -f hipstar.yaml"
         }
       }
     }
