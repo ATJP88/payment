@@ -73,7 +73,7 @@ spec:
           sh "gcloud auth activate-service-account --key-file=./service-account.json"
           sh "gcloud config list"
           sh "gcloud container clusters get-credentials k8s-cluster-dev --region europe-west2 --project intrepid-league-397203"
-          sh "kubectl delete -f hipstar.yaml"
+          sh "kubectl apply -f hipstar.yaml"
         }
       }
     }
