@@ -88,8 +88,8 @@ spec:
     //       sh "gcloud config list"
     //       sh "gcloud container clusters get-credentials k8s-cluster-dev --region europe-west2 --project intrepid-league-397203"
     //       sh "kubectl apply -f hipstar.yaml"
-        }
-      }
-    }
+    //     }
+    //   }
+    // }
   }
 }
