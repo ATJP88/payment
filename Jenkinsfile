@@ -29,6 +29,11 @@ spec:
     command:
     - cat
     tty: true
+  - name: maven-build
+    image: maven
+    command:
+    - cat
+    tty: true
   - name: gcloud
     image: gcr.io/google.com/cloudsdktool/cloud-sdk
     command:
