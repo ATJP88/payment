@@ -75,6 +75,7 @@ spec:
                     }
 		}
 	    }
+    }
     stage('codebuild') {
       steps {
         container('gradle-bld') {
