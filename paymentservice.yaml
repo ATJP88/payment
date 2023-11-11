@@ -28,7 +28,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: paymentservice
-        image: gcr.io/intrepid-league-397203/pay:latest
+        image: ${IMAGE_TAG}:latest
         ports:
         - containerPort: 50051
         readinessProbe:
