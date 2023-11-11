@@ -52,7 +52,7 @@ spec:
 	    agent {
     	    	kubernetes {
       		    cloud 'kubernetes'
-      		    label 'maven-pod'
+      		    // label 'maven-pod'
       		    yamlFile 'maven-pod.yaml'
 		}
 	    }
