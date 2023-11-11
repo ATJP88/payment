@@ -48,6 +48,14 @@ spec:
 }
   }
   stages {
+    stage("Build and test") {
+	    agent {
+    	    	kubernetes {
+      		    cloud 'kubernetes'
+      		    label 'maven-pod'
+      		    yamlFile 'maven-pod.yaml'
+		}
+	    }
     stage('codebuild') {
       steps {
         container('gradle-bld') {
